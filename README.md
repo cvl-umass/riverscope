@@ -1,14 +1,3 @@
----
-license: cc
-tags:
-- satellite
-- segmentation
-- rivers
-- widths
-- radar
-- interferometry
----
-
 # RiverScope: A Global Benchmark for Fine-Scale River Segmentation and Width Estimation
 
 This repository contains information about the dataset.
