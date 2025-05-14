@@ -3,7 +3,8 @@
 This repository contains information about the dataset.
 For information about training and models, go to: [RiverScope models](https://github.com/cvl-umass/riverscope-models)
 
-Download the dataset from the following: [https://zenodo.org/records/15376394](https://zenodo.org/records/15376394)
+Download the dataset from the following: [https://zenodo.org/records/15376394](https://zenodo.org/records/15376394) (the data is about 8GB zipped, 10GB unzipped)
+
 Alternatively you can run the following:
 ```
 wget https://zenodo.org/records/15376394/files/RiverScope.zip
