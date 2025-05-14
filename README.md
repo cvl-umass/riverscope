@@ -1,4 +1,4 @@
-# RiverScope: A Global Benchmark for Fine-Scale River Segmentation and Width Estimation
+# RiverScope: High-Resolution River Masking Dataset
 
 This repository contains information about the dataset.
 For information about training and models, go to: [RiverScope models](https://github.com/cvl-umass/riverscope-models)
@@ -126,7 +126,7 @@ There is a csv file that contains the reference nodes available in SWORD (`SWORD
 ### SWOT
 Data types: .tif (for pixc), .geojson (for nodes)
 
-SWOT has multiple products available. As part of our dataset we release the 3D pixel cloud (PIXC), and the node-level data (NodeSP). To reduce the size of our dataset, we release PIXC to be rendered in the same projection and area as the corresponding PlanetScope images. To obtain the raw files, you can refer to the `swot_node_id` and `swot_pixc_id` in the `train/valid/test.csv` files.
+SWOT has multiple products available. As part of our dataset we release the 3D pixel cloud (PIXC), and the node-level data (RiverSP Node). To reduce the size of our dataset, we release PIXC to be rendered in the same projection and area as the corresponding PlanetScope images. To obtain the raw files, you can refer to the `swot_node_id` and `swot_pixc_id` in the `train/valid/test.csv` files.
 1. `pixc`: this contains the projected pixel cloud from the raw file. This is used to visualize the SWOT data before it's processed/aggregated along nodes/reaches.
 2. `nodes`: this contains the aggregated data from `pixc`. Data is aggregated into nodes (points along the river spaced around 200m apart) based on the pixels identified as water from `pixc`. This contains the SWOT-derived widths per node. You can read this file in python using [pandas](https://pandas.pydata.org/):
 ```python
