@@ -1,0 +1,67 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "citeAs": "cr:citeAs",
+    "column": "cr:column",
+    "conformsTo": "dct:conformsTo",
+    "cr": "http://mlcommons.org/croissant/",
+    "rai": "http://mlcommons.org/croissant/RAI/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "dct": "http://purl.org/dc/terms/",
+    "examples": {
+      "@id": "cr:examples",
+      "@type": "@json"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileProperty": "cr:fileProperty",
+    "fileObject": "cr:fileObject",
+    "fileSet": "cr:fileSet",
+    "format": "cr:format",
+    "includes": "cr:includes",
+    "isLiveDataset": "cr:isLiveDataset",
+    "jsonPath": "cr:jsonPath",
+    "key": "cr:key",
+    "md5": "cr:md5",
+    "parentField": "cr:parentField",
+    "path": "cr:path",
+    "recordSet": "cr:recordSet",
+    "references": "cr:references",
+    "regex": "cr:regex",
+    "repeated": "cr:repeated",
+    "replace": "cr:replace",
+    "sc": "https://schema.org/",
+    "separator": "cr:separator",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "transform": "cr:transform"
+  },
+  "@type": "sc:Dataset",
+  "name": "RiverScope",
+  "description": "RiverScope is a global-scale, high-resolution satellite image dataset focused on rivers using PlanetScope and co-registered with other sensors SWOT, Landsat (via SWORD), and Sentinel-2. Our dataset contains expert-labeled water segmentation on PlanetScope images to capture fine details that high-resolution imagery better reveals. There are 1,145 images with pre-defined train/valid/test splits that can be used for research on fine-scale water segmentation, width estimation, and future multi-sensor hydrological modeling.",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "citeAs": "Daroya, R., Rowley, T., Flores, J., Friedmann, E., Bennitt, F., An, H., Simmons, T., Hughes, M. J., Kluetmeier, C. L., Kica, S., V\u00e9lez, J. D., Esenther, S. E., Howard, T. E., Ye, Y., Turcotte, A., Gleason, C., & Maji, S. (2025). RiverScope: High-Resolution River Masking Dataset [Data set]. Zenodo. https://doi.org/10.5281/zenodo.15376394",
+  "datePublished": "2025-05-14T00:00:00",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "url": "https://zenodo.org/records/15376394",
+  "version": "1.0",
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "riverscope-data",
+      "name": "riverscope-data",
+      "description": "RiverScope dataset.",
+      "contentUrl": "https://zenodo.org/records/15376394/files/RiverScope.zip",
+      "encodingFormat": "application/zip",
+      "sha256": "e931d07e0dfbdd0815feb32e5c4e724de52c447b8312c98f8a8e3c3ed139e63b"
+    }
+  ]
+}
