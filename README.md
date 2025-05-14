@@ -3,6 +3,18 @@
 This repository contains information about the dataset.
 For information about training and models, go to: [RiverScope models](https://github.com/cvl-umass/riverscope-models)
 
+![overview](images/overview.png)
+## Table of contents
+1. [Dataset download](#dataset-download)
+2. [Dataset Structure](#dataset-structure)
+    1. [PlanetScope](#planetscope)
+        1. [Input](#input)
+        2. [Labels](#labels)
+    2. [Sentinel-2](#sentinel-2)
+    3. [SWORD](#sword)
+    4. [SWOT](#swot)
+
+## Dataset Download
 Download the dataset from the following: [https://zenodo.org/records/15376394](https://zenodo.org/records/15376394) (the data is about 8GB zipped, 10GB unzipped)
 
 Alternatively you can run the following:
@@ -67,7 +79,10 @@ wget https://zenodo.org/records/15376394/files/RiverScope.zip
 ### PlanetScope
 Data type: .tif (both input and label)
 
-PlanetScope is the high-resolution satellite image data (3m/pixel). It has 4 bands: B,G,R,NIR (in this order) and all bands have 3m/pixel resolution.
+PlanetScope is the high-resolution satellite image data (3m/pixel). 
+
+#### Input
+It has 4 bands: B,G,R,NIR (in this order) and all bands have 3m/pixel resolution.
 
 | Band  | Name  |
 | ---   | ---   |
@@ -83,6 +98,14 @@ import rasterio
 img_metadata = rasterio.open(satellite_fp)  # you can use this to determine the projection, extent, etc
 img_data = img_metadata.read()              # this will read all available bands and will be a numpy array of shape (bands, H, W)
 ```
+#### Labels
+It is a single band label with the following values per pixel:
+| Value  | Description  |
+| ---   | ---   |
+|   0   | Background (non-water)  |
+|   1   | River water |
+|   2   | Non-river water (e.g., lakes, points, etc)   |
+
 
 ### Sentinel-2
 Data type: .tif
@@ -124,7 +147,9 @@ import matplotlib.pyplot as plt
 fig, ax1 = plt.subplots(1, 1, figsize=(8, 8))
 line_gdf.plot(ax=ax1, color='blue', label='River reach')        # this visualizes the reaches contained in the shapefile.
 ```
-<!-- ![alt text](SWORD_sample.png) -->
+<!-- ![SWORD sample](images/SWORD_sample.png) -->
+<img src="images/SWORD_sample.png" alt="SWORD sample" width="200"/>
+
 
 Data type: .csv
 
