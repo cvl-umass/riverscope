@@ -13,6 +13,7 @@ For information about training and models, go to: [RiverScope models](https://gi
     2. [Sentinel-2](#sentinel-2)
     3. [SWORD](#sword)
     4. [SWOT](#swot)
+3. [Citation](#citation)
 
 ## Dataset Download
 Download the dataset from the following: [https://zenodo.org/records/15376394](https://zenodo.org/records/15376394) (the data is about 8GB zipped, 10GB unzipped)
@@ -165,4 +166,33 @@ SWOT has multiple products available. As part of our dataset we release the 3D p
 import pandas as pd
 
 node_data = pd.read_csv(nodes_fp)
+```
+## Citation
+If you found this useful, please consider citing our work:
+```
+@dataset{daroya_2025_15376394,
+  author       = {Daroya, Rangel and
+                  Rowley, Taylor and
+                  Flores, Jonathan and
+                  Friedmann, Elisa and
+                  Bennitt, Fiona and
+                  An, Heejin and
+                  Simmons, Travis and
+                  Hughes, Marissa Jean and
+                  Kluetmeier, Camryn L and
+                  Kica, Solomon and
+                  Vélez, J. Daniel and
+                  Esenther, Sarah E. and
+                  Howard, Thomas E. and
+                  Ye, Yanqi and
+                  Turcotte, Audrey and
+                  Gleason, Colin and
+                  Maji, Subhransu},
+  title        = {RiverScope: High-Resolution River Masking Dataset},
+  month        = may,
+  year         = 2025,
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.15376394},
+  url          = {https://doi.org/10.5281/zenodo.15376394},
+}
 ```
